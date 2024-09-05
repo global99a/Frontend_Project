@@ -20,9 +20,35 @@ body {
 .container{
     display: flex;
     justify-content: space-between;
-    
-   margin-top: 100px;
+    margin-top: 100px;
+    margin-bottom: 200px;
 }
-.left{
+.left {
     padding: 80px;;
+}
+.left p{
+    padding: 4px;
+    font-size: 18px;
+   
+    color: rgb(14, 169, 216);
+}
+.left h1 button{
+    padding: 30px;
+}
+ .left a{
+width: 100%;
+background-color: #9eedef;
+color: #080710;
+padding: 15px 15px;
+font-size: 18px;
+font-weight: 600;
+border-radius: 5px;
+cursor: pointer;
+margin-left: 100px;
+text-decoration: none;
+margin: 10px;
+}
+
+.container2{
+    background-color: #d3d3f0;
 }
