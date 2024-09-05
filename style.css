@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(237, 239, 244);
+}
+.navbar {
+    background: rgba(72, 170, 222); /* Transparent background */
+}
+.navbar-collapse {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.navbar-nav.center-nav {
+    margin: 0 auto;
+    justify-content: center;
+    flex-grow: 1;
+}
+.navbar-brand {
+    margin-right: auto;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    
+   margin-top: 100px;
+}
+.left{
+    padding: 80px;;
+}
