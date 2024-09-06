@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #e3f9f9;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h3>Book Your Tickets</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="bookingForm" action="./seats.html">
+                           
+                            <div class="form-group">
+                                <label for="movieSelect">Select Movie</label>
+                                <select class="form-control" id="movieSelect" required>
+                                    <option value="">Choose a movie</option>
+                                    <option value="Saripodhaa Sanivaaram">Saripodhaa Sanivaaram</option>
+                                    <option value="35 (2024)">35 (2024)</option>
+                                    <option value="Aay(Telugu)">Aay(Telugu)</option>
+                                    <option value="Gabbar Singh (Telugu)">Gabbar Singh (Telugu)</option>
+                                    <option value="Strange Darling">Strange Darling</option>
+                                    <option value="Inside Out 2">Inside Out 2</option>
+                                    <option value="Khel khel mein">Khel khel mein</option>
+                                    <option value="Laila Majnu">Laila Majnu</option>
+                                    <option value="Committee Kurrollu">Committee Kurrollu</option>
+                                    <option value="Kung Fu Panda 4">Kung Fu Panda 4</option>
+                                    <option value="Deadpool & Wolverines">Deadpool & Wolverines</option>
+                                    <option value="Alien: Romulus">Alien: Romulus</option>
+                                  
+                                </select>
+                            </div>
+
+                          
+                            <div class="form-group">
+                                <label for="showDate">Show Date</label>
+                                <input type="date" class="form-control" id="showDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="showTime">Show Time</label>
+                                <select class="form-control" id="showTime" required>
+                                    <option value="10:00 AM">10:00 AM</option>
+                                    <option value="01:00 PM">01:00 PM</option>
+                                    <option value="04:00 PM">04:00 PM</option>
+                                    <option value="07:00 PM">07:00 PM</option>
+        
+                                   
+                                </select>
+                            </div>
+
+                           
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                            </div>
+                            <a href="./seats.html">Book Tickets</a>
+
+<!--                          
+                            <button type="button" class="btn btn-primary btn-block" >Book Tickets</button> -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script>
+        function redirectToTheaters() {
+            const movie = document.getElementById('movieSelect').value;
+            const date = document.getElementById('showDate').value;
+            const time = document.getElementById('showTime').value;
+            const name = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+
+            if (movie && date && time && name && email) {
+                window.location.href = `theater.html?movie=${encodeURIComponent(movie)}&date=${encodeURIComponent(date)}&time=${encodeURIComponent(time)}`;
+            } else {
+                alert('Please fill out all fields.');
+            }
+        }
+    </script> -->
+
+</body>
+</html>

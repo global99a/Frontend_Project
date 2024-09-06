@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Theater and Showtime</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color:  #3d3e3e;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h3>Select Theater and Showtime</h3>
+                    </div>
+                    <div class="card-body">
+                        <div id="theaterList"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const movie = getQueryParam('movie');
+            const date = getQueryParam('date');
+            const time = getQueryParam('time');
+
+            const theaters = [
+                'Theater 1 - 10:00 AM',
+                'Theater 2 - 1:00 PM',
+                'Theater 3 - 4:00 PM',
+                'Theater 4 - 7:00 PM',
+            ];
+
+            const theaterList = document.getElementById('theaterList');
+            theaters.forEach(theater => {
+                const theaterButton = document.createElement('button');
+                theaterButton.className = 'btn btn-info btn-block mb-2';
+                theaterButton.textContent = theater;
+                theaterButton.onclick = () => {
+                    window.location.href = `seats.html?movie=${encodeURIComponent(movie)}&date=${encodeURIComponent(date)}&time=${encodeURIComponent(time)}&theater=${encodeURIComponent(theater)}`;
+                };
+                theaterList.appendChild(theaterButton);
+            });
+        });
+    </script>
+
+</body>
+</html>
